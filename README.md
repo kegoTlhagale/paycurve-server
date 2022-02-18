@@ -12,7 +12,8 @@ TOKEN_KEY=
 MONGO_URI=
 NODE_ENV=
 ```
-### Compiles and hot-reloads for development
+### How to start the server. Run either on of the following commands on the root directory
 ```
 npm run start
+npm run dev
 ```
