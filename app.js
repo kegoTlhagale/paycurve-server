@@ -15,7 +15,7 @@ const User = require("./model/user");
 const auth = require("./middleware/auth");
 
 const corsOptions = {
-  origin: 'http://localhost:8081',
+  origin: `http://localhost:${process.env.VUE_PORT}`,
   credentials: true,  //access-control-allow-credentials:true
   optionSuccessStatus: 200
 }
@@ -205,7 +205,7 @@ app.post("/logout", (req, res) => {
 });
 
 app.get("/welcome", auth, (req, res) => {
-  res.status(200).send({ message: "Welcome🙌 " });
+  res.status(200).send({ message: "Welcome " });
   // logic to connect to weather or any open api
 });
 
